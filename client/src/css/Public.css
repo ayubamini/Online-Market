@@ -1,0 +1,329 @@
+html,body{
+    margin: 0px;
+}
+
+/*login modal*/
+.public .modal {
+    display: block; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.public .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 50px 50px 50px 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px; 
+    
+}
+
+.accountMenu-switchTab {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 50px 50px 0px 0px;
+    overflow: hidden;
+
+}
+
+.accountMenu-title {
+    font-size: larger;
+    font-weight: bold;
+    color: #757575;
+    flex: 1;
+    padding: 20px;
+    background: #e4e4e4;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.accountMenu-activeTitle {
+    font-size: larger;
+    font-weight: bold;
+    color: #0c8b00;
+    flex: 1;
+    padding: 20px;
+    background: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.form-input-container {
+    position: relative;
+    padding: 15px 35px;
+  }
+  
+  .form-input-container input {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 45px; 
+    box-sizing: border-box;
+  }
+
+  .password-toggle-icon {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    cursor: pointer;
+  }
+
+  .password-toggle-icon.active {
+    color: #59b828; 
+    background-color: #00000000 !important;}
+
+    .error-message {
+        color: #dc3545; /* Bootstrap's red color for errors */
+        font-size: 0.875em; /* Adjust size as needed */
+        position: absolute;
+        left: 35px; /* Align with input text */
+        width: calc(100% - 70px); /* Adjust width based on container's padding */
+    }
+
+.additional-links {
+    text-align: center; /* Align the link to the right */
+    margin-bottom: 15px; /* Spacing below the link */
+    margin-top: 15px;
+}
+
+.additional-links,.back-to-login-link a {
+    font-size: 0.9rem; /* Smaller font size for the link */
+}
+
+.back-to-login-link {
+    text-align: center; /* Center the link */
+    padding-bottom: 5px;
+    margin-top: -25px;
+}
+
+
+  /* Style for the checkbox labels and containers */
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin-bottom: 10px;
+  }
+  
+  .checkbox-container input[type="checkbox"] {
+    margin-right: 10px;
+  }
+
+  .form-button-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 10px 0px 30px 0px;
+  }
+
+  /* Style for the buttons like the sign-up button */
+  .form-button {
+    width: 70%;
+    background-color: #59b828; /* Example color */
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+
+    color: white  !important; 
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .form-button:hover {
+    background-color: #4CAF50; /* Darker shade for hover state */
+  }
+
+  .forgot-password-form p {
+    text-align: center; 
+    padding: 0px 30px 0px 30px;
+    margin: 10px 0px;
+}
+
+
+/*Navigation Bar (categories menu,account menu)*/
+nav.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top:1px #d4d4d4 solid;
+    border-bottom: 1px #d4d4d4 solid;
+}
+
+
+.account-dropbtn,
+.categories-dropbtn {
+    background-color: #ffffff;
+    color: rgb(37, 37, 37);
+    padding: 25px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.account-dropdown,
+.categories-dropdown {
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.account-dropdown-content,
+.categories-dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    width: 100%;
+    z-index: 1;
+    max-height: 0; 
+    overflow: hidden; 
+    transform: scaleY(0); 
+    transform-origin: top; 
+    transition: transform 0.3s ease, max-height 0.3s ease;
+    transition-delay: 0s;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+}
+
+.categories-dropdown-content {
+    border-top: 5px solid #59b828; 
+    
+}
+
+.account-dropdown:hover .account-dropdown-content,
+.categories-dropdown:hover .categories-dropdown-content  {
+    max-height: 500px; 
+    transform: scaleY(1); 
+}
+
+.account-dropdown-content a,
+.categories-dropdown-content a {
+    border-bottom: 0.1px #ebebeb solid;
+    color: rgb(41, 41, 41);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    opacity: 1;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; 
+}
+
+.account-dropdown-content a:hover,
+.categories-dropdown-content a:hover {
+    color: #f1f1f1;
+    background-color: #59b828;
+    border-color: #59b828; 
+    
+}
+
+
+.categories-dropbtn svg {
+    padding-right: 5px;
+    transition: transform 0.3s; 
+}
+
+
+.user-icon {
+    font-size: 30px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+    border-bottom: 0.1px #ebebeb solid;
+
+}
+
+/*Banner slide*/
+
+.banner-slider {
+    height: 500px;
+}
+
+.mySlides {
+    position: relative;
+    display: none;
+    width: 100%; 
+    height: 100%;
+}
+
+.mySlides img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+}
+
+.mySlides.display {
+    display: block;
+    animation-name: fade;
+    animation-duration: 5s;
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    left: 0; 
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.form-group .required .control-label:after {
+    content:"*";color:red;
+}
+
+.public .active, .dot:hover {
+    background-color: #717171;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/*responsive*/
+@media (max-width: 768px) {
+
+
+    .prev, .next {
+        font-size: 16px; 
+        padding: 12px;
+    }
+
+    .numbertext, .dot {
+        font-size: 10px; 
+    }
+
+}
